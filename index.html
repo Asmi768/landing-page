@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Asmi — Responsive & Accessible Landing</title>
+  <meta name="description" content="Responsive, accessible single-page landing with an accessible contact flow.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <h1 class="brand">Asmi Mohan</h1>
+      <nav aria-label="Primary" class="nav">
+        <ul class="nav-list">
+          <li><button><a href="#about">About</a></button></li>
+          <li><button><a href="#projects">Projects</a></button></li>
+          <li><button><a href="#contact">Contact</a></button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h2 id="hero-title">Build. Secure. Innovate.</h2>
+        <p class="lead">I’m Asmi — a BCA (Hons) student focused on front‑end development, AI, and cybersecurity. Scroll to learn more or get in touch.</p>
+        <p><a class="cta" href="#contact">Get in touch</a></p>
+      </div>
+      <figure class="hero-illustration" aria-hidden="true">
+      </figure>
+    </section>
+
+    <section id="about" class="card" aria-labelledby="about-title">
+      <h3 id="about-title">About</h3>
+      <p>Second-year BCA (Hons) student skilled in HTML, CSS, JavaScript, Java, C/C++, Android, PHP & MySQL, with experience in cybersecurity and generative AI. Certifications include Microsoft, Google, and IIT Bombay programs.</p>
+    </section>
+
+    <section id="projects" class="card" aria-labelledby="projects-title">
+      <h3 id="projects-title">Select Projects</h3>
+      <ul>
+        <li>AI-powered cybersecurity dashboard</li>
+        <li>Online auction bidding system</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card" aria-labelledby="contact-title">
+      <h3 id="contact-title">Contact</h3>
+      <form id="contact-form" novalidate>
+        <p class="hint">All fields required. We'll reply within 3 business days.</p>
+
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required aria-required="true" minlength="2" />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required aria-required="true" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required aria-required="true" minlength="10"></textarea>
+
+        <div class="form-row">
+          <button type="submit" class="btn">Send message</button>
+          <button type="reset" class="btn secondary">Reset</button>
+        </div>
+
+        <div id="form-status" role="status" aria-live="polite" class="sr-only"></div>
+      </form>
+    </section>
+
+    <footer class="site-footer">
+      <p>© 2025 Asmi Mohan — <a href="#contact">Contact</a></p>
+    </footer>
+  </main>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
